@@ -1,0 +1,71 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.mainDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px
+}
+.input-section{
+    margin: 50px 0px;
+}
+.add-input{
+    padding: 15px;
+    border: 1px solid black;
+    width: 450px;
+    margin: 5px;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.btn{
+    border: 1px solid black;
+    margin: 5px;
+    padding: 15px;
+    width: 100px;
+    cursor: pointer;
+    background-color:rgba(255, 157, 0, 0.455) ;
+    border-radius: 0px 8px 8px 0px;
+}
+.btn-o1{
+    border: 1px solid black;
+    margin: 5px;
+    padding: 8px;
+    width: 60px;
+    cursor: pointer;
+    background-color:rgba(255, 157, 0, 0.455) ;
+    border-radius:5px;
+}
+.done-btn{
+    background-color: rgba(3, 255, 3, 0.296);
+}
+
+.redo{
+    text-decoration: line-through;
+    color: gray;
+}
+.delete-btn{
+    background-color: rgba(255, 0, 0, 0.391);
+}
+
+
+.text-display{
+    font-size: 18px;
+    margin: 0px 120px;
+}
+.each-task{
+    /* width: 600px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+
+
+}
+.input-edit{
+    padding: 5px;
+}
+

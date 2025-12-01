@@ -15,7 +15,7 @@ const Login = ({ onSwitchToSignup }) => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:4000/login", {
+      const response = await fetch("https://todo-list-project-backend-integration.onrender.com/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

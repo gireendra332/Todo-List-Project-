@@ -12,7 +12,7 @@ const Todo = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // ============= FETCH TODOS ON COMPONENT MOUNT =============
+  // using useEffect to fetchTodos()
   useEffect(() => {
     if (user && user.userId) {
       fetchTodos();
@@ -20,7 +20,7 @@ const Todo = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user?.userId]);
 
-  // ============= FETCH USER'S TODOS FROM BACKEND =============
+  // fetch users from backend
   const fetchTodos = async () => {
     try {
       setLoading(true);
@@ -51,7 +51,7 @@ const Todo = () => {
     }
   };
 
-  // ============= ADD NEW TODO TO BACKEND =============
+  // adding todo to backend
   const addTheText = async () => {
     if (!task || task.trim().length === 0) return;
 
@@ -82,7 +82,7 @@ const Todo = () => {
     }
   };
 
-  // ============= DELETE TODO FROM BACKEND =============
+  //dleteing todo from backend
   const handleDelete = async (todoId) => {
     try {
       setError(null);
@@ -104,7 +104,7 @@ const Todo = () => {
     }
   };
 
-  // ============= ENTER EDIT MODE FOR A TODO =============
+  // editing todo
   const handleEdit = (todoId, text) => {
     // Put item into edit mode and populate editText with current text
     const updatedTodos = todos.map((item) =>
@@ -114,7 +114,7 @@ const Todo = () => {
     setTodos(updatedTodos);
   };
 
-  // ============= SAVE EDITED TODO TO BACKEND =============
+  //send edited text to backend
   const newEdit = async (todoId) => {
     if (!editText || editText.trim().length === 0) return;
 
@@ -148,7 +148,7 @@ const Todo = () => {
     }
   };
 
-  // ============= TOGGLE DONE STATUS OF TODO =============
+  //handle done
   const handleDone = async (todoId) => {
     const todoToToggle = todos.find((t) => t.id === todoId);
     if (!todoToToggle) return;

@@ -95,7 +95,7 @@ const TodoRedux = () => {
               padding: "8px 16px",
               backgroundColor: "#ff6b6b",
               color: "white",
-              border: "none",
+              border: "1px solid black",
               borderRadius: "5px",
               cursor: "pointer",
               fontWeight: "bold",

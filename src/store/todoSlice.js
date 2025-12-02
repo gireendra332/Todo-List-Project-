@@ -59,7 +59,7 @@ export const addTodoAsync = createAsyncThunk(
             return {
                 id: result.id,
                 text: taskText.trim(),
-                done: false,
+                done: false,  // Make sure this is false
                 edit: true
             };
         } catch (err) {

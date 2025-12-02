@@ -29,25 +29,21 @@ const TodoRedux = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user?.userId]);
 
-  
   const addTheText = () => {
     if (!task || task.trim().length === 0) return;
     dispatch(addTodoAsync({ taskText: task.trim(), userId: user.userId }));
     setTask("");
   };
 
- 
   const handleDelete = (id) => {
     dispatch(deleteTodoAsync(id));
   };
-
 
   const handleEdit = (id, text) => {
     setEditText(text);
     dispatch(startEdit(id));
   };
 
- 
   const newEdit = (id) => {
     if (!editText || editText.trim().length === 0) return;
 
@@ -64,7 +60,6 @@ const TodoRedux = () => {
     setEditText("");
   };
 
-  
   const handleDone = (id) => {
     const todoToToggle = todos.find((t) => t.id === id);
     if (!todoToToggle) return;
@@ -86,15 +81,12 @@ const TodoRedux = () => {
       >
         <h1>Todo List</h1>
         <div style={{ textAlign: "right" }}>
-          <p style={{ margin: "0 0 10px 0", color: "#666" }}>
-            {user?.email}
-          </p>
+          <p style={{ margin: "0 0 10px 0", color: "#666" }}>{user?.email}</p>
           <button
             onClick={logout}
             style={{
               padding: "8px 16px",
-              backgroundColor: "#ff6b6b",
-              color: "white",
+              backgroundColor: "rgba(255, 0, 0, 0.391)",
               border: "1px solid black",
               borderRadius: "5px",
               cursor: "pointer",
@@ -149,7 +141,7 @@ const TodoRedux = () => {
             </button>
 
             {t.edit ? (
-              <div className={`text-display ${t.done ? "undo" : "redo"}`}>
+              <div className={`text-display ${t.done ? "redo" : "undo"}`}>
                 {t.text}
               </div>
             ) : (

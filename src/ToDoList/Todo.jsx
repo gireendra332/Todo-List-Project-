@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Todo.css";
 import { useAuth } from "../context/AuthContext";
 
-const API_BASE_URL = "https://todo-list-project-backend-integration-1bk1.onrender.com";
+const API_BASE_URL ="https://todo-list-project-backend-integration-1bk1.onrender.com";
 
 const Todo = () => {
   const { user, logout } = useAuth();
@@ -179,7 +179,6 @@ const Todo = () => {
     }
   };
 
- 
   // const handleDelete = (idx) => {
   //   const copy = todo.filter((_, i) => {
   //     return i !== idx;
@@ -236,14 +235,12 @@ const Todo = () => {
       >
         <h1>Todo</h1>
         <div style={{ textAlign: "right" }}>
-          <p style={{ margin: "0 0 10px 0", color: "#666" }}>
-             {user?.email}
-          </p>
+          <p style={{ margin: "0 0 10px 0", color: "#666" }}>{user?.email}</p>
           <button
             onClick={logout}
             style={{
               padding: "8px 16px",
-              backgroundColor: "#ff6b6b",
+              backgroundColor: "rgba(255, 0, 0, 0.391)",
               color: "white",
               border: "none",
               borderRadius: "5px",
@@ -292,7 +289,7 @@ const Todo = () => {
 
             {todoItem.edit ? (
               <div
-                className={`text-display ${todoItem.done ? "undo" : "redo"}`}
+                className={`text-display ${todoItem.done ? "redo" : "undo"}`}
               >
                 {todoItem.text}
               </div>

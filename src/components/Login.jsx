@@ -14,7 +14,7 @@ const Login = ({ onSwitchToSignup }) => {
     setError("");
     setLoading(true);
 
-    try {
+    try {123456
       const response = await fetch("https://todo-list-project-backend-integration-1bk1.onrender.com/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -45,6 +45,7 @@ const Login = ({ onSwitchToSignup }) => {
 
   return (
     <div className="auth-container">
+      <div><span style={{color:"red"}}>note :</span> demo credentials ( email : test@gmail.com, password : test123 )</div>
       <div className="auth-card">
         <h2>Login</h2>
 

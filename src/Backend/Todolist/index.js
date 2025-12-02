@@ -4,7 +4,7 @@ const cors = require("cors")
 const bodyParser = require("body-parser")
 const mysql = require('mysql2');
 
-const port = 4000;
+const port = process.env.PORT ;
 
 app.use(bodyParser.json())
 app.use(cors())
@@ -41,6 +41,10 @@ db.connect((err) => {
 
 
 // Create new user
+app.get("/", (req, res) => {
+    res.send("hello world");
+});
+
 app.post("/signup", (req, res) => {
     console.log("Signup request:", req.body);
 

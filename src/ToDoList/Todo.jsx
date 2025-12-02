@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Todo.css";
 import { useAuth } from "../context/AuthContext";
 
-const API_BASE_URL = "https://todo-list-project-backend-integration.onrender.com/";
+const API_BASE_URL = "http://localhost:4000/";
 
 const Todo = () => {
   const { user, logout } = useAuth();

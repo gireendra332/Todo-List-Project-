@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
-const API_BASE_URL = "https://todo-list-project-backend-integration.onrender.com/";
+const API_BASE_URL = "http://localhost:4000";
 
 // ASYNC THUNKS FOR API CALLS 
 

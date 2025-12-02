@@ -9,12 +9,26 @@ const port = 4000;
 app.use(bodyParser.json())
 app.use(cors())
 
+// const db = mysql.createConnection({
+//     host: "ballast.proxy.rlwy.net",
+//     user: "root",
+//     password: "qqhzPpJudDFYpSDtFBcxFqsASdXyWbxZ", 
+//     port: 35355,
+//     database: "railway",
+// })
+
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "gireendra",
-    password: "Giri@332",
-    database: "todolist",
+    host: "ballast.proxy.rlwy.net",
+    user: "root",
+    password: "qqhzPpJudDFYpSDtFBcxFqsASdXyWbxZ",
+    port: 35355,
+    database: "railway",
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
 })
+
+
 
 db.connect((err) => {
     if (err) {
